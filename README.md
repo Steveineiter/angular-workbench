@@ -1,6 +1,7 @@
 # angular-workbench
 
 https://www.youtube.com/watch?v=oUmVFHlwZsI
+https://github.com/AhsanAyaz/angular-in-90ish
 
 ## General Inforamtion
 
@@ -51,6 +52,17 @@ Or in nested directory
 To create HomeComponent
 
 - ng g c home
+
+### Data Binding
+
+- Works with signal key word / is more modern approach.
+- We could use var = "foo" as well, aka traditional way. BUT signals are highly encouraged.
+- Signals will be used in the future / are more future proofe.
+- If we want pass something to other component we need to allow that.
+
+### Event Listeners
+
+- "keyup", "keydown" etc keyword inside of input tag and pass a handler
 
 ## General notes
 
