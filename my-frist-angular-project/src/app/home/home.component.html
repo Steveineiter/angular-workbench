@@ -1,5 +1,10 @@
-<p>home works!</p>
+<!-- <p>home works!</p> -->
 <!-- <app-greeting message="Hello from html" />  Same as: -->
 <!-- <app-greeting [message]="'Hello from html'" /> But this expects JS -->
 <app-greeting [message]="homeMessage()" />
-<input type="text" (keyup)="keyUpHandler($event)" />
+<app-counter />
+<input
+  placeholder="Type somehting..."
+  type="text"
+  (keyup)="keyUpHandler($event)"
+/>

@@ -1,0 +1,26 @@
+<!-- <p>Todo works!</p> -->
+<!-- <p>{{ todoItems()[0].title }}</p> -->
+<h3>Todos List</h3>
+
+<!-- I only want to show this while loading.. Nice case for directives -->
+<!-- Here we should have a signal/variable to tell us if data is done tho -->
+<!-- <p *ngIf="!todoItems().length">Loading...</p> -->
+<!-- Same as -->
+@if (!todoItems().length) {
+<p>Loading...</p>
+}
+
+<form>
+  <label>Filter Todos</label>
+  <input
+    name="searchTerm"
+    [(ngModel)]="searchTerm"
+    placeholder="Search todos..."
+  />
+</form>
+
+<ul class="todos">
+  @for (todo of todoItems() | filterTodos : searchTerm(); track todo.id) {
+  <app-todo-item (todoToggled)="updateTodoItem($event)" [todo]="todo" />
+  }
+</ul>
